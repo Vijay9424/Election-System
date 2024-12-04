@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticate</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e90ff, #87cefa);
+            color: #fff;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Form */
+        form {
+            display: inline-block;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+
+        /* Form Labels */
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Form Inputs */
+        form input {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        /* Submit Button */
+        form button {
+            background-color: #1e90ff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        form button:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+
+        /* Result Paragraph */
+        p {
+            margin-top: 15px;
+            font-size: 16px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Authenticate to Vote</h1>
+        <form id="auth-form">
+            <label for="voter-id">Voter ID:</label>
+            <input type="text" id="voter-id" name="voter-id" required>
+            <label for="otp">OTP:</label>
+            <input type="text" id="otp" name="otp" required>
+            <button type="submit">Authenticate</button>
+        </form>
+        <p id="auth-result"></p>
+    </div>
+    <script src="auth.js"></script>
+</body>
+
+</html>
