@@ -7,7 +7,7 @@ form.addEventListener('submit', async (event) => {
     const otp = document.getElementById('otp').value;
 
     try {
-        const response = await fetch('https://electronic-election-system.onrender.com:5000/authenticate', {
+        const response = await fetch('https://electronic-election-system.onrender.com/authenticate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ voter_id: voterId, otp: otp }),
