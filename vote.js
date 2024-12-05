@@ -8,7 +8,7 @@ form.addEventListener('submit', async (event) => {
     console.log(token.toString());
     
     try {
-        const response = await fetch('https://127.0.0.1:5000/vote', {
+        const response = await fetch('https://electronic-election-system.onrender.com:5000/vote', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: token.toString(), vote: vote }),
